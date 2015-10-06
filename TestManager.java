@@ -7,7 +7,7 @@ public class TestManager
 	String title = "Movie";
 	String genre = "Adventure";
 	int rating = 4;
-	String cast[] = {"SomeGuy","SomeGirl","SomeThing"}
+	String cast[] = {"SomeGuy","SomeGirl","SomeThing"};
 
 	@Test
 	public void testMovieFinder()
