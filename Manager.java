@@ -28,8 +28,7 @@ public class Manager // this class has the only direct link to the list, in the 
 
 	public void add (String aName, String aGenre, int aRating, String [] aCast)
 	{
-		Movie aMovie = new Movie(aName, aGenre, aRating, aCast);
-		MovieNode aMovieNode = new MovieNode(aMovie, null);
+		MovieNode aMovieNode = new MovieNode(aName, aGenre, aRating, aCast, null);
 
 		if (head == null)
 		{
