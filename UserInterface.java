@@ -169,7 +169,7 @@ public class UserInterface
 			System.out.println("Your movie was not found in the list"); }
 		else {
 			System.out.println("\nMovie Found: \n");
-			System.out.print(found.getData().printAll()); }
+			System.out.print(found.printAll()); }
 	}
 
 }

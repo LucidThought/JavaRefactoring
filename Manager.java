@@ -38,22 +38,22 @@ public class Manager // this class has the only direct link to the list, in the 
 		{
 			MovieNode finder = head;
 			do {
-				if (finder.getData().getName().compareToIgnoreCase(aName) < 0 && finder.getNext() == null) {
+				if (finder.getName().compareToIgnoreCase(aName) < 0 && finder.getNext() == null) {
 					finder.setNext(aMovieNode); 
 					break; }
-				else if (finder.getData().getName().compareToIgnoreCase(aName) < 0 && finder.getNext().getData().getName().compareToIgnoreCase(aName) > 0) {
+				else if (finder.getName().compareToIgnoreCase(aName) < 0 && finder.getNext().getName().compareToIgnoreCase(aName) > 0) {
 					MovieNode temp = finder.getNext();
 					finder.setNext(aMovieNode);
 					aMovieNode.setNext(temp);
 					break; }
-				else if (finder.getData().getName().compareToIgnoreCase(aName) == 0) {
+				else if (finder.getName().compareToIgnoreCase(aName) == 0) {
 					MovieNode temp = finder.getNext();
 					finder.setNext(aMovieNode);
 					aMovieNode.setNext(temp); 
 					break; }
 				finder = finder.getNext();
 			} while (finder != null);
-			if (aName.compareToIgnoreCase(head.getData().getName()) < 0) {
+			if (aName.compareToIgnoreCase(head.getName()) < 0) {
 					aMovieNode.setNext(head);
 					head = aMovieNode; }
 			else if (finder.getNext() == null) {
@@ -77,7 +77,7 @@ public class Manager // this class has the only direct link to the list, in the 
 					in.nextLine(); 
 					count = ZERO; }
 				count++;
-				System.out.print(tempNode.getData().printAll());
+				System.out.print(tempNode.printAll());
 				tempNode = tempNode.getNext();
 			} while (tempNode != null);
 	}
@@ -93,7 +93,7 @@ public class Manager // this class has the only direct link to the list, in the 
 			in.nextLine(); }
 		counter++;
 		if (temp != null) {
-			System.out.print(temp.getData().printAll()); }
+			System.out.print(temp.printAll()); }
 	}
 
 	private void resetCounter()
@@ -115,7 +115,7 @@ public class Manager // this class has the only direct link to the list, in the 
 			return; }
 		while (remove != null) 
 		{
-			if (remove.getData().getName().equalsIgnoreCase(movie)) {
+			if (remove.getName().equalsIgnoreCase(movie)) {
 				if (previous == null) {
 					head = remove.getNext(); }
 				else {
@@ -137,7 +137,7 @@ public class Manager // this class has the only direct link to the list, in the 
 		MovieNode temp = head;
 		while (temp != null) 
 		{
-			if (temp.getData().getName().equalsIgnoreCase(movie)) {
+			if (temp.getName().equalsIgnoreCase(movie)) {
 				return temp; }
 			temp = temp.getNext();
 		} 
