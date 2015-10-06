@@ -92,7 +92,7 @@ public class UserInterface
 			case 4:
 				newGenre = "Comedy";
 				break;
-			case 7:
+			case 5:
 				newGenre = "Other";
 				break;
 		}
@@ -119,9 +119,7 @@ public class UserInterface
 		System.out.println("2 - Drama");
 		System.out.println("3 - Science Fiction");
 		System.out.println("4 - Comedy");
-		System.out.println("5 - Horror");
-		System.out.println("6 - Martial Arts");
-		System.out.println("7 - other");
+		System.out.println("5 - other");
 	}
 	public int getGenre () // this method gets the movie genre in the form of an integer. it calls the showGenre method to show the list of genres
 	{
