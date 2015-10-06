@@ -61,7 +61,7 @@ public class MovieNode // this class stored a link to a single movie. the progra
 		showMovie = showMovie + "Rating: " + rating + "\n";
 		showMovie = showMovie + "Cast:" + "\n";
 		showMovie = showMovie + cast[0] + "\n" + cast[1] + "\n" + cast[2] + "\n";
-		showMovie = showMovie + "*************************** \n";
+		showMovie = showMovie + "************************************** \n";
 		return showMovie;
 	}
 
