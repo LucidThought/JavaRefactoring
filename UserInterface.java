@@ -103,7 +103,7 @@ public class UserInterface
 	}
 	public void addMovie () // This method prompts for movie information, then calls aManager to create a MovieNode and a Movie
 	{
-		aManager.add(getTitle(), getGenre(), getRating(), getCast());
+		aManager.addNewAlphabeticalOrder(getTitle(), getGenre(), getRating(), getCast());
 	}
 
 	public String parseGenre(int genreCode)

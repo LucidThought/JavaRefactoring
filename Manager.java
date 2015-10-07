@@ -26,7 +26,7 @@ public class Manager // this class has the only direct link to the list, in the 
 		in = new Scanner(System.in);
 	}
 
-	public void add (String aName, String aGenre, int aRating, String [] aCast)
+	public void addNewAlphabeticalOrder(String aName, String aGenre, int aRating, String [] aCast)
 	{
 		MovieNode aMovieNode = new MovieNode(aName, aGenre, aRating, aCast, null);
 
@@ -72,7 +72,7 @@ public class Manager // this class has the only direct link to the list, in the 
 		MovieNode tempNode = head;
 		int count = ZERO;
 			do {
-				if (count > THREE) {
+				if (count > ONE) {
 					System.out.println("Press enter to continue");
 					in.nextLine(); 
 					count = ZERO; }
@@ -88,7 +88,7 @@ public class Manager // this class has the only direct link to the list, in the 
 		if (temp != null) {
 			MovieNode next = temp.getNext();
 			doBackwardsDisplay(next); }
-		if (counter > FOUR) {
+		if (counter > THREE) {
 			System.out.println("Press enter to continue");
 			in.nextLine(); }
 		counter++;
