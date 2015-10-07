@@ -145,7 +145,7 @@ public class UserInterface
 		showGenre();
 		int genreKey = ZERO;
 		while (genreKey < ONE || genreKey > SEVEN) {
-			System.out.println("Choose your genre (1-7): ");
+			System.out.println("Choose your genre (1-5): ");
 			genreKey = in.nextInt(); }
 		in.nextLine();
 		return genreKey;
