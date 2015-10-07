@@ -12,7 +12,7 @@ public class ExportList
 	
 			while (head != null)
 			{
-				pw.print(head.getData().printAll());
+				pw.print(head.printAll());
 				head = head.getNext();
 			}
 			fw.close();
