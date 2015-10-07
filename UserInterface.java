@@ -103,7 +103,7 @@ public class UserInterface
 	}
 	public void addMovie () // This method prompts for movie information, then calls aManager to create a MovieNode and a Movie
 	{
-		String title = getTitle();
+		//String title = getTitle();
 		int numGenre = getGenre();
 		String newGenre = "Other";
 		switch (numGenre)
@@ -126,15 +126,15 @@ public class UserInterface
 			default:
 				newGenre = "Other";
 		}
-		int newRating = getRating();
-		String [] newCast = getCast();
+		//int newRating = getRating();
+		//String [] newCast = getCast();
 		
-		aManager.add(title, newGenre, newRating, newCast);
+		aManager.add(getTitle(), newGenre, getRating(), getCast());
 	}
 
 	public void showGenre () // this is a movie genre list
 	{
-		System.out.println("1 - Action");
+		System.out.println("1 - Action/Adventure");
 		System.out.println("2 - Drama");
 		System.out.println("3 - Science Fiction");
 		System.out.println("4 - Comedy");
