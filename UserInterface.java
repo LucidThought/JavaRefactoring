@@ -68,6 +68,8 @@ public class UserInterface
 			else if (!select.equalsIgnoreCase("Q")) {
 				System.out.println("That's not a menu option, try again"); }
 		}
+		ExportList listFile = new ExportList();
+		listFile.writeList(aManager.pointHead());
 		System.out.println("Goodbye!");
 			
 	}
