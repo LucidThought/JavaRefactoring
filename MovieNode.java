@@ -21,7 +21,6 @@ public class MovieNode // this class stored a link to a single movie. the progra
 		setGenre(aGenre);
 		setRating(aRating);
 		setCast(aCast);
-		next = null;
 	}
 	public void setNext (MovieNode pointer)
 	{
