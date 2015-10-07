@@ -14,10 +14,6 @@ public class MovieNode // this class stored a link to a single movie. the progra
 	private int rating;
 	private String [] cast;
 	
-	public MovieNode ()
-	{
-		next = null;
-	}
 	public MovieNode (String aName, String aGenre, int aRating, String [] aCast, MovieNode next)
 	{
 		setNext(next);
@@ -25,7 +21,7 @@ public class MovieNode // this class stored a link to a single movie. the progra
 		setGenre(aGenre);
 		setRating(aRating);
 		setCast(aCast);
-
+		next = null;
 	}
 	public void setNext (MovieNode pointer)
 	{
