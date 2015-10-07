@@ -71,11 +71,39 @@ public class UserInterface
 		System.out.println("Goodbye!");
 			
 	}
-
-	public void addMovie () // This method prompts for movie information, then calls aManager to create a MovieNode and a Movie
+	
+	public String getTitle()
 	{
 		System.out.print("\nEnter a title for the movie: ");
 		String newName = in.nextLine();
+		return newName;
+	}
+	public int getRating()
+	{
+		int newRating = 0;
+		while (newRating < ONE || newRating > TOP)
+		{
+			System.out.print("Enter a star rating (1-5) ");
+			newRating = in.nextInt();
+		}
+		return newRating;
+	}
+	public String[] getCast()
+	{
+		in.nextLine();
+		String [] cast = new String[3];
+		System.out.print("Enter cast member name 1: ");
+		cast[0] = in.nextLine();
+		System.out.print("Enter cast member name 2: ");
+		cast[1] = in.nextLine();
+		System.out.print("Enter cast member name 3: ");
+		cast[2] = in.nextLine();
+		return cast;
+		
+	}
+	public void addMovie () // This method prompts for movie information, then calls aManager to create a MovieNode and a Movie
+	{
+		String title = getTitle();
 		int numGenre = getGenre();
 		String newGenre = "Other";
 		switch (numGenre)
@@ -95,22 +123,13 @@ public class UserInterface
 			case 5:
 				newGenre = "Other";
 				break;
+			default:
+				newGenre = "Other";
 		}
-		int newRating = 0;
-		while (newRating < ONE || newRating > TOP)
-		{
-			System.out.print("Enter a star rating (1-5) ");
-			newRating = in.nextInt();
-		}
-		in.nextLine();
-		String [] newCast = new String [3];
-		System.out.print("Enter cast member name 1: ");
-		newCast[0] = in.nextLine();
-		System.out.print("Enter cast member name 2: ");
-		newCast[1] = in.nextLine();
-		System.out.print("Enter cast member name 3: ");
-		newCast[2] = in.nextLine();
-		aManager.add(newName, newGenre, newRating, newCast);
+		int newRating = getRating();
+		String [] newCast = getCast();
+		
+		aManager.add(title, newGenre, newRating, newCast);
 	}
 
 	public void showGenre () // this is a movie genre list
