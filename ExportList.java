@@ -6,8 +6,7 @@ public class ExportList
 	{
 		try
 		{
-			String targetFile = fileName;
-			FileWriter fw = new FileWriter(tagetFile);
+			FileWriter fw = new FileWriter(fileName);
 			PrintWriter pw = new PrintWriter(fw);
 	
 			while (head != null)
