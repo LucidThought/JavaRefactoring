@@ -69,7 +69,7 @@ public class UserInterface
 				System.out.println("That's not a menu option, try again"); }
 		}
 		ExportList file = new ExportList();
-		file.writeList(aManager.pointHead());
+		file.writeList(aManager.pointHead(),getFileName());
 		System.out.println("Goodbye!");
 			
 	}
