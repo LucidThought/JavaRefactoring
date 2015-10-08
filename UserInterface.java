@@ -73,6 +73,13 @@ public class UserInterface
 		System.out.println("Goodbye!");
 			
 	}
+
+	public String getFileName()
+	{
+		System.out.println("What would you like to name your list of movies?");
+		String fileName = in.nextLine();
+		return fileName;
+	}
 	
 	public String getTitle()
 	{

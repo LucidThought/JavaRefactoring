@@ -2,12 +2,12 @@ import java.io.*;
 
 public class ExportList
 {
-	public void writeList(MovieNode head)
+	public void writeList(MovieNode head, String fileName)
 	{
 		try
 		{
-			String filename = "movie_list.txt";
-			FileWriter fw = new FileWriter(filename);
+			String targetFile = fileName;
+			FileWriter fw = new FileWriter(tagetFile);
 			PrintWriter pw = new PrintWriter(fw);
 	
 			while (head != null)
